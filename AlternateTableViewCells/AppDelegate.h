@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AlternateTableViewCellViewController.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    AlternateTableViewCellViewController *alternateTableViewCellViewController;
 
+}
 @property (strong, nonatomic) UIWindow *window;
 
 @end

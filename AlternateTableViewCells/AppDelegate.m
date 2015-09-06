@@ -13,6 +13,28 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    if (IDIOM==IPAD) {
+         alternateTableViewCellViewController=[[AlternateTableViewCellViewController alloc]initWithNibName:@"AlternateTableViewCellViewController" bundle:nil];
+    }
+    else
+    {
+        if (isiPhone5) {
+            alternateTableViewCellViewController=[[AlternateTableViewCellViewController alloc]initWithNibName:@"AlternateTableViewCellViewController_iPhone5" bundle:nil];
+        }
+        else if (isiPhone4)
+        {
+             alternateTableViewCellViewController=[[AlternateTableViewCellViewController alloc]initWithNibName:@"AlternateTableViewCellViewController_iPhone4" bundle:nil];
+        
+        }
+        else
+        {
+             alternateTableViewCellViewController=[[AlternateTableViewCellViewController alloc]initWithNibName:@"AlternateTableViewCellViewController_iPhone" bundle:nil];
+        
+        }
+    
+    }
+   
+    self.window.rootViewController=alternateTableViewCellViewController;
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

@@ -1,0 +1,22 @@
+//
+//  Define.h
+//  Fakruddin
+//
+//  Created by Mahboob on 6/11/15.
+//  Copyright (c) 2015 Mahboob. All rights reserved.
+//
+
+#ifndef Fakruddin_Define_h
+#define Fakruddin_Define_h
+
+#define IDIOM    UI_USER_INTERFACE_IDIOM()
+#define IPAD     UIUserInterfaceIdiomPad
+#define isiPhone5  ([[UIScreen mainScreen] bounds].size.height == 568)?TRUE:FALSE
+#define isiPhone4  ([[UIScreen mainScreen] bounds].size.height == 480)?TRUE:FALSE
+
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define DATE_FORMAT_2 @"yyyy-MM-dd"
+
+
+#endif
